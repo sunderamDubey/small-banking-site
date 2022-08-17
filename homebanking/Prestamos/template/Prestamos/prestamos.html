@@ -1,0 +1,115 @@
+{% extends "Cuentas/template/Cuentas/base.html" %}
+{% load static %}
+
+
+<html>
+
+  <head>
+    {% block title %} ITBANK- Prestamos {% endblock %}
+    {% block extrahead %}
+    <link type="text/css" href="{% static 'css/prestamos.css' %}" rel="stylesheet">
+    {% endblock %}
+  </head>
+
+  <body>
+
+    {% block content %}
+    <nav class="navbar-dark navbar-expand-md">
+      <div class="container-fluid">
+        <div class="row head2 nav2">
+          <button class="navbar-toggler burger" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <img src="{% static 'images/logo itbank.png' %}" alt="Logo itbank"
+                class="d-inline-block align-text-top logo">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="col-1"></div>
+              <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'hub' %}"> Inicio </a></div>
+              <div class="col-2 cent1"><a class="nav-link active1 ng" href="{% url 'prestamos' %}"> Préstamos </a></div>
+              <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'transf' %}"> Transferencias </a></div>
+              <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'inv' %}"> Inversiones </a></div>
+              <div class="col-2 cent1"><a class="nav-link dropdown-toggle ng" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false"> Información </a>
+                <ul class="dropdown-menu fondo drop" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item drop" href="{% url 'act' %}">Actividad</a></li>
+                  <li><a class="dropdown-item drop" href="{% url 'tarjetas' %}">Tarjetas</a></li>
+                  <li><a class="dropdown-item drop" href="{% url 'conf' %}">Configuración</a></li>
+                  <li><a class="dropdown-item drop" href="{% url 'seg' %}">Seguridad</a></li>
+                </ul>
+              </div>
+              <div class="col-1 cent1"></div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2>Solicitá tu préstamo</h2>
+          <hr>
+          <form method="POST" novalidate>
+            {% csrf_token %}
+            {% for field in form %}
+            {% if not field.label == 'Loan date' %}
+            <div class="form-group mb-2">
+              <label for="{{field.label}}" class="form-label">{{field.label}}</label>
+              {{field}}
+            </div>
+            <!-- START ---- for showing error messages related to fields -->
+            {% for error in field.errors %}
+            <p class="bg-danger px-3 py-2 text-center text-white rounded">{{error}}</p>
+            {% endfor %}
+            <!-- END --- for showing error messages related to fields -->
+
+
+            {% endif %}
+            {% if field.label == 'Loan date' %}
+            <div class="form-group mb-2">
+              <label for="{{field.label}}" class="form-label">{{field.label}} (DD/MM/YYYY)</label>
+              {{field}}
+            </div>
+            <!-- START ---- for showing error messages related to fields -->
+            {% for error in field.errors %}
+            <p class="bg-danger px-3 py-2 text-center text-white rounded">{{error}}</p>
+            {% endfor %}
+            <!-- END --- for showing error messages related to fields -->
+
+            {% endif %}
+            {% endfor %}
+            <br>
+            <hr>
+            <br>
+            <button type="submit" class="btn btn-primary btn-md col-12">Solicitar</button>
+            <br>
+          </form>
+          {% if success_msg %}
+          {% if cuentapesos %}
+          <p class="alert alert-success cent">{{success_msg}} en cuenta N°{{cuentapesos}}</p>
+          {% endif %}
+          {% if cuentacorri %}
+          <p class="alert alert-success cent">{{success_msg}} en cuenta N°{{cuentacorri}}</p>
+          {% endif %}
+          {% endif %}
+          {% for error in form.non_field_errors %}
+          <p class="alert alert-danger cent">{{error}}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+    {% endblock %}
+
+  </body>
+
+</html>

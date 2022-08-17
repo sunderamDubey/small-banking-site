@@ -1,0 +1,173 @@
+
+.fontContainer{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+}
+
+.dolarBoxStyle{
+    padding: 0;
+    margin: auto 12px;
+    box-shadow: 0px 0px 10px #c7c7c7;
+}
+
+.dolarTitle{
+    background-color: #1A2542;
+    font-weight: 400;  
+}
+
+.dolaresImg{
+    width: 40px;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.up{
+    filter: invert(52%) sepia(92%) saturate(3012%) hue-rotate(81deg) brightness(120%) contrast(92%);
+}
+
+.down{
+    filter: invert(16%) sepia(83%) saturate(7500%) hue-rotate(3deg) brightness(93%) contrast(116%);
+}
+
+.montoDolar{
+    font-weight: 700;
+}
+
+/*Media*/
+
+@media only screen and (min-width: 250px) and (max-width: 320px) {
+
+    h1 {
+        margin-top: -20px;
+    }
+
+    .dolarBoxStyle {
+        margin: auto -1px;
+        padding: 0px 8px 0px 8px;
+    }
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 397px) {
+    h1 {
+        font-size: 22px;
+        margin-top: -10px;
+    }
+
+    .dolarBoxStyle {
+        margin: auto -1px;
+        padding: 0px 8px 0px 8px;
+    }
+
+    .fecha {
+        margin-bottom: 10px;
+    }
+
+    .liqui {
+        margin-bottom: -35px;
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 397px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 398px) and (max-width: 450px) {
+    h1 {
+        font-size: 27px;
+        margin-top: -10px;
+    }
+
+    .dolarBoxStyle {
+        margin: auto -1px;
+        padding: 0px 8px 0px 8px;
+    }
+
+    .fecha {
+        margin-bottom: 10px;
+    }
+
+    .liqui {
+        margin-bottom: -35px;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 575px) {
+    h1 {
+        font-size: 31px;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .dolarBoxStyle {
+        margin: auto -1px;
+        padding: 0px 8px 0px 8px;
+    }
+
+    .fecha {
+        margin-bottom: 10px;
+    }
+
+    .liqui {
+        margin-bottom: -35px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 575px) {
+    h1 {
+        font-size: 35px;
+    }
+}
+
+
+@media only screen and (min-width: 550px) and (max-width: 575px) {
+    h1 {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .dolar {
+        margin-top: 0px;
+    }
+
+    .liqui {
+        padding-bottom: 1px;        
+    }
+
+    .referencia {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        margin-left: 115px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h1 {
+        margin-left: 220px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1368px) {
+    h1 {
+        margin-left: 285px;
+    }
+}
+
+@media only screen and (min-width: 1369px) and (max-width:1450px) {
+    h1 {
+        margin-left: 390px;
+    }
+}

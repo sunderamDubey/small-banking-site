@@ -1,0 +1,906 @@
+
+body{
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 13.5%;
+}
+
+.logo{
+    max-width: 160px;
+}
+
+.margen{
+    margin-right: 25%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.head{
+    background-color: #1A2542;
+}
+
+.salir{
+    justify-content: right;
+}
+
+.bl{
+    color: rgb(172, 172, 172);
+}
+
+.bl:focus{
+    color: rgb(172, 172, 172);
+}
+
+.bl:hover{
+    color: white;
+}
+
+.fot{
+    border-left: 1px solid rgb(172, 172, 172);
+    padding-left: 5px;
+}
+
+.barra{
+    width: 8.5%;
+    margin-left: 19%;
+}
+
+.burger{
+    width: fit-content;
+    padding: 0 1%;
+    border-radius: 3px;
+    filter: invert(500%) sepia(0%) saturate(1%) hue-rotate(3deg) brightness(100%) contrast(100%);
+    border-width: 1px;
+    border-color: #aeaeae;
+    margin-right: 3%;
+}
+
+.nav2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.head2{
+    background-color: #24beff;
+    margin-bottom: 1%;
+    padding: 9px 0;
+}
+
+.ng{
+    color: #1A2542;
+    margin: 0px;
+    width: 105px;
+}
+
+.active1{
+    font-weight: bolder;
+}
+
+.ng:hover{
+    color: white;
+}
+
+.footer{
+    background-color: #1A2542;
+    padding: 1.1% 0;
+}
+
+.ft{
+    color: rgb(172, 172, 172);
+}
+
+.nav3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.contenido{
+    width: 55%;
+}
+
+.ic{
+    width: 25px;
+    height: auto;
+    filter: invert(84%) sepia(12%) saturate(22%) hue-rotate(324deg) brightness(81%) contrast(88%);
+    padding-top: 10px;
+}
+
+.ic2{
+    width: 20px;
+    height: auto;
+    filter: invert(84%) sepia(12%) saturate(22%) hue-rotate(324deg) brightness(81%) contrast(88%);
+    margin: 0px 5px 3px 10px;
+    padding: 0;
+}
+
+.ic3{
+    padding: 0px;
+    margin: 0;
+}
+
+.ic4{
+    width: 25px;
+    height: auto;
+    filter: invert(84%) sepia(12%) saturate(22%) hue-rotate(324deg) brightness(81%) contrast(88%);
+}
+
+.ic5{
+    padding-bottom: 1.6%;
+}
+
+.margen2:hover{
+    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(330deg) brightness(1000%) contrast(100%);
+}
+
+.icizq{
+    margin-left: 19%;
+}
+
+.icder{
+    margin-right: 20%;
+}
+
+.drop{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+.fondo{
+    background-color: #1A2542;
+
+}
+
+.cent{
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cent1{
+    display: flex;
+    justify-content: center;
+}
+
+.cent2{
+    display: flex;
+    justify-content: center;
+}
+
+.mov{
+    height: 600px;
+}
+
+.titulo{
+    height: fit-content;
+    margin-bottom: 1%;
+}
+
+/* centro */
+
+.fondo1{
+    background-color:white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 150%;
+    box-shadow: 1px 1px 10px #8c8c8c;
+}
+
+.fondo2{
+    background-color:white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 130%;
+    box-shadow: 1px 1px 10px #8c8c8c;
+}
+.fondo3{
+    background-color:white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 150%;
+    box-shadow: 1px 1px 10px #8c8c8c;
+}
+
+
+.mtop{
+    margin-top: 0.7%;
+}
+
+.depositbox{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+hr{
+    margin: 5px 0px;
+    height: 2px;
+    border: none;
+    background-color: black;
+}
+
+.hr1{
+    margin: 2% 0px;
+    height: 1px;
+    background-color: rgb(74, 74, 74);
+}
+
+.hr2{
+    margin: 5px 0px 3% 0px;
+}
+
+.xd{
+    row-gap: 5px;
+}
+
+.fond{
+    background-color: white;
+    height: 10%;
+}
+
+.foto{
+    width: 95%;
+    max-width: 310px;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0% 5% 0%;
+    box-shadow: 0px 0px 10px #8c8c8c;
+    border-radius: 6.5%;
+}
+
+.foto:hover{
+    box-shadow: 0px 0px 10px #1e1e1e;
+}
+
+.foto2{
+    width: 95%;
+    max-width: 310px;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0% 5% 0%;
+    box-shadow: 0px 0px 10px #8c8c8c;
+    border-radius: 6.5%;
+}
+
+.foto2:hover{
+    box-shadow: 0px 0px 10px #1e1e1e;
+}
+
+.alineacion{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.movim{
+    font-size: 90%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    border-right: solid 1px rgb(54, 54, 54);
+    padding: 1% 0;
+}
+
+.movim2{
+    font-size: 90%;
+    font-weight: 700;
+    background-color: white;
+    border-right: solid 1px rgb(54, 54, 54);
+    padding: 1% 0;
+}
+
+.movim3{
+    font-size: 90%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+}
+
+.movim4{
+    font-size: 90%;
+    font-weight: 700;
+    background-color: white;
+    padding: 1% 0;
+}
+
+.pest-tarj-head{
+    font-size: 90%;
+    font-weight: 900;
+    background-color: rgb(201, 201, 201);
+    border: solid 1px rgb(54, 54, 54);
+    padding: 1% 0;
+}
+
+.pest-tarj{
+    font-size: 85%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    border-right: solid 1px rgb(54, 54, 54);
+    padding: 1% 0;
+}
+
+.pest-tarj2{
+    font-size: 85%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+}
+
+.pest-tarj3{
+    font-size: 85%;
+    font-weight: 700;
+    background-color: white;
+    border: solid 1px rgb(201, 201, 201);
+    padding: 1% 0;
+}
+
+.margtarj{
+    margin-bottom: 1%;
+}
+
+.tarj{
+    font-size: 80%;
+    font-weight: 700;
+    background-color: white;
+    padding: 1% 0;
+}
+
+.tarj-2{
+    font-size: 80%;
+    font-weight: 900;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+}
+.tarj-21{
+    font-size: 80%;
+    font-weight: 900;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.tarj-22{
+    font-size: 80%;
+    font-weight: 900;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tarj2{
+    font-size: 70%;
+    font-weight: 700;
+    background-color: white;
+    padding: 1% 0;
+}
+
+.tarj3{
+    font-size: 70%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+}
+
+.tarj4{
+    font-size: 70%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.tarj5{
+    font-size: 70%;
+    font-weight: 700;
+    background-color: rgb(201, 201, 201);
+    padding: 1% 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.borde-tarj{
+    margin: 0 auto 2%;
+}
+
+.medio{
+    text-align: start;
+    padding-left: 3%;
+}
+
+.marg{
+    padding: 1% 0.55em;
+}
+
+.marg2{
+    padding: 1% 0.55em 0.5%;
+}
+
+.icono{
+    width: 20px;
+    height: auto;
+    float: right;
+    margin: 3% 5% 0 0;
+    filter: invert(29%) sepia(0%) saturate(0%) hue-rotate(242deg) brightness(97%) contrast(87%);
+}
+
+.icono:hover{
+    filter: invert(0%) sepia(7%) saturate(21%) hue-rotate(5deg) brightness(78%) contrast(103%);
+}
+
+.txtcuenta{
+    font-size: 100%;
+    font-weight: 700;
+}
+
+.boton{
+    width: 100%;
+}
+
+.boton2{
+    margin-bottom: 0;
+    margin-top: 1.5%;
+}
+
+.datacuenta{
+    margin: 6.1% auto;
+}
+
+.numcuenta{
+    font-size: 250%;
+    font-weight: 900;
+}
+
+.espacio{
+    font-size: 30%;
+    margin: 0 auto;
+}
+
+.espacio1{
+    font-size: 15%;
+    margin: 0 auto;
+}
+
+.achico{
+    margin: 0 0.03% 1%;
+}
+
+.redo1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.redo2{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding-left: 1.8%;
+}
+
+.btn-secondary{
+    background-color: rgb(172, 172, 172);
+    color: black;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-secondary:hover{
+    background-color: #343434;
+}
+
+.acl-tarj{
+    font-size: 60%;
+    text-align: left;
+    font-weight: 700;
+}
+
+.log{
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 424px;
+}
+
+.titlog{
+    font-weight: 700;
+    font-size: 150%;
+    margin-top: 5%;
+}
+
+.formutxt{
+    text-align: left;
+}
+
+.label{
+    color: black;
+    font-weight: 700;
+    font-size: 90%;
+}
+
+.pielog{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+.pielog:hover{
+    color: black;
+}
+
+.campo{
+    border: none;
+    border-bottom: 1.3px solid rgb(0, 0, 0);
+    background: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.botlog{
+    border: none;
+    outline: none;
+    background:#1A2542;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.marglog{
+    margin-bottom: 1.5%;
+}
+
+.marglog2{
+    margin-bottom: 5%;
+}
+
+.vertical-center{
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.llamoinput input{
+    width: 100%;
+    border: none;
+    border-bottom: 1.3px solid rgb(0, 0, 0);
+    background: transparent;
+    outline: none;
+}
+
+/* media */
+
+@media only screen and (min-width: 100px) and (max-width: 1750px){
+
+    .tarj2{
+        font-size: 60%;
+    }
+    .tarj3{
+        font-size: 60%;
+    }
+    .tarj4{
+        font-size: 60%;
+    }
+    .tarj5{
+        font-size: 60%;
+    }
+    .numcuenta{
+        font-size: 200%;
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1450px){
+
+    .letramedia{
+        font-size: large;
+        font-weight: 900;
+    }
+    .tarj2{
+        font-size: 50%;
+    }
+    .tarj3{
+        font-size: 50%;
+    }
+    .tarj4{
+        font-size: 50%;
+    }
+    .tarj5{
+        font-size: 50%;
+    }
+    .numcuenta{
+        font-size: 180%;
+    }
+    .fondo2{
+        font-size: 110%;
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 1290px){
+
+    .letrachica1{
+        font-size: 60%;
+    }
+
+    .pest-tarj{
+        font-size: 70%;
+    }
+    .pest-tarj2{
+        font-size: 70%;
+    }
+    .pest-tarj3{
+        font-size: 70%;
+    }
+    .tarj2{
+        font-size: 40%;
+    }
+    .tarj3{
+        font-size: 40%;
+    }
+    .tarj4{
+        font-size: 40%;
+    }
+    .tarj5{
+        font-size: 40%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+    .foto, .foto2{
+        width: 47%;
+        margin: 0.5%;
+    }
+}
+
+
+
+@media only screen and (min-width: 100px) and (max-width: 1200px){
+
+    .letramedia{
+        font-size: medium;
+        font-weight: 900;
+
+    }
+    .tarj{
+        font-size: 70%;
+    }
+    .numcuenta{
+        font-size: 140%;
+    }
+    .txtcuenta{
+        font-size: 80%;
+    }
+    .mtop{
+        margin-top: 1%;
+    }
+    .head2{
+        margin-bottom: 1.5%;
+    }
+    .fondo2{
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1060px){
+
+    .letramedia{
+        font-size: 50%;
+    }
+    .icono{
+        width: 12px;
+    }
+    .pest-tarj-head{
+        font-size: 75%;
+    }
+    .pest-tarj-head2{
+        font-size: 75%;
+    }
+    .pest-tarj{
+        font-size: 60%;
+    }
+    .pest-tarj2{
+        font-size: 60%;
+    }
+    .pest-tarj3{
+        font-size: 60%;
+    }
+    .numcuenta{
+        font-size: 120%;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 992px){
+
+    .tarj2{
+        font-size: 50%;
+    }
+    .tarj3{
+        font-size: 50%;
+    }
+    .tarj4{
+        font-size: 50%;
+    }
+    .tarj5{
+        font-size: 50%;
+    }
+    .numcuenta{
+        font-size: 160%;
+    }
+    .txtcuenta{
+        font-size: 90%;
+    }
+    .mtop{
+        margin-top: 1.5%;
+    }
+    .fondo2{
+        font-size: 75%;
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 870px){
+
+    .pest-tarj{
+        font-size: 50%;
+    }
+    .pest-tarj2{
+        font-size: 50%;
+    }
+    .pest-tarj3{
+        font-size: 50%;
+    }
+    .fondo2{
+        font-size: 65%;
+    }
+    .fondo3{
+        font-size: 110%;
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px){
+  
+    .contenido{
+        width: 95%;
+    }
+
+    .letrachica{
+        font-size: xx-small;
+    }      
+    .ic4,.ic5,.ic{
+        width: 15px;
+    }
+    .letramedia{
+        font-size: small;
+        font-weight: 900;
+    }
+    .icono{
+        width: 10px;
+    }
+    .barra{
+        width: 30%;
+        margin-left: 2%;
+    }
+    .margen{
+        margin-right: 5%;
+    }
+    .ng:focus{
+        color: #1A2542;
+    }
+    .ng:hover{
+        color: #1A2542;
+    }
+    .nav2{
+        justify-content: right;
+    }
+    .cent1{
+        justify-content: left;
+    }
+    .ic{
+        padding-top: 5px;
+    }
+    .head2{
+        margin-bottom: 2.5%;
+    }
+
+}
+
+
+@media only screen and (min-width: 100px) and (max-width: 576px){
+
+    .margen{
+        display: inline-block;
+        margin-right: 1%;
+    }
+    .margen1{
+        float: left;
+    }
+    .margen2{
+        display: block;
+        text-align: center;
+    }
+    .salir{
+        text-align: right;
+    }
+    .head2{
+        margin-bottom: 3.5%;
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 450px){
+
+    .ic4,.ic5,.ic{
+        width: 10px;
+    }    
+    .icono{
+        width: 7px;
+    }
+    .letramedia{
+        font-size: x-small;
+        font-weight: 900;
+    }
+    .movim, .movim2, .movim3, .movim4, .redo2{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .medio{
+        padding-left: 3%;
+    }
+    .arreglofooter{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .letrachica2{
+        font-size: 50%;
+    }
+    .ic{
+        padding-top: 0;
+    }
+    .pest-tarj-head{
+        font-size: 65%;
+    }
+    .pest-tarj-head2{
+        font-size: 65%;
+    }
+    .pest-tarj{
+        font-size: 35%;
+    }
+    .pest-tarj2{
+        font-size: 35%;
+    }
+    .pest-tarj3{
+        font-size: 35%;
+    }
+    .fondo2{
+        font-size: 45%;
+    }
+    .fondo3{
+        font-size: 90%;
+    }
+    .log{
+        width: 95%; 
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 260px){
+
+    .letrachica{
+        font-size: 30%;
+    }  
+    .letrachica2{
+        font-size: 80%;
+    }
+    .fondo1{
+        font-size: 90%;
+    }
+    .boton3{
+        font-size: 80%;
+    }
+}

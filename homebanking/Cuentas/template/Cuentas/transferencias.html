@@ -1,0 +1,126 @@
+{% extends "Cuentas/template/Cuentas/base.html" %}
+{% load static %}
+{% load mathfilters %}
+
+<html>
+    <head>
+        {% block title %} ITBANK - Transferencias {% endblock %}
+    </head>
+
+    <body>
+        {% block content %}
+
+        <nav class="navbar-dark navbar-expand-md">
+          <div class="container-fluid">
+            <div class="row head2 nav2">
+              <button class="navbar-toggler burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <img src="{% static 'images/logo itbank.png' %}" alt="Logo itbank" class="d-inline-block align-text-top logo">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="col-1"></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'hub' %}"> Inicio </a></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'prestamos' %}"> Préstamos </a></div>
+                  <div class="col-2 cent1"><a class="nav-link active1 ng" href="{% url 'transf' %}"> Transferencias </a></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'inv' %}"> Inversiones </a></div>
+                  <div class="col-2 cent1"><a class="nav-link dropdown-toggle ng" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Información </a>
+                    <ul class="dropdown-menu fondo drop" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item drop" href="{% url 'act' %}">Actividad</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'tarjetas' %}">Tarjetas</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'conf' %}">Configuración</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'seg' %}">Seguridad</a></li>
+                    </ul>
+                  </div>
+                <div class="col-1 cent1"></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <h2>Nueva transferencia</h2>
+                <hr>
+                <form>
+                  <div class="mb-2">
+                    <label for="cuentadeorigen" class="form-label"> Cuenta de origen </label>
+                    <select name="" id="cuentadeorigen" class="form-control">
+                      {% if not datacuenta %}
+                      <option value="SEL">Actualmente no posee cuentas</option>
+                      {% endif %}
+                      {% if datacuenta %}
+                      <option value="SEL">Seleccione una cuenta</option>
+                      {% endif %}
+                      {% for c in datacuenta %}
+                      {% if c.type == "Caja de ahorro en pesos" %}
+                      <option value="CTAARS">CTA $ {{c.iban}} (${{c.balance|div:100}})</option>
+                      {% endif %}
+                      {% if c.type == 'Caja de ahorro en dólares' %}
+                      <option value="CTAUSD">CTA U$D {{c.iban}} (U$D{{c.balance|div:100}})</option>
+                      {% endif %}
+                      {% if c.type == 'Cuenta Corriente' %}
+                      <option value="CTACORR">CTACORR $ {{c.iban}} (${{c.balance|div:100}})</option>
+                      {% endif %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <label for="cuentadedestino" class="form-label"> Cuenta de destino </label>
+                    <input type="text" id="cuentadedestino" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="moneda" class="form-label"> Moneda </label>
+                    <select name="" id="moneda" class="form-control">
+                      <option value="ARS">Peso argentino</option>
+                      <option value="USD">Dólar estadounidense</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <label for="monto" class="form-label"> Monto </label>
+                    <input type="number" min="1" max="150000" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="conecpto" class="form-label"> Concepto </label>
+                    <select name="" id="concepto" class="form-control">
+                      <option value="concepto1">Varios</option>
+                      <option value="concepto2">Alquiler</option>
+                      <option value="concepto3">Cuota</option>
+                      <option value="concepto4">Expensas</option>
+                      <option value="concepto5">Factura</option>
+                      <option value="concepto6">Prestamo</option>
+                      <option value="concepto7">Seguro</option>
+                      <option value="concepto8">Haberes</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="descripcion" class="form-label"> Descripción </label>
+                    <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                  </div>
+                  <br>
+                  <div class="form-check form-switch">
+                    <label for="enviarmail" class="form-check-label" for="flexSwitchCheckDefault"> Enviar aviso de transferencia por e-mail </label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  </div>
+                  <br>
+                  <hr>
+                  <br>
+                  <button type="button" class="btn btn-primary btn-md col-12" >Transferir</button>
+                  <br>
+                  <br>
+                </form>
+              </div>
+            </div>
+          </div>
+        
+        
+        {% endblock %}
+    </body>
+
+</html>
+

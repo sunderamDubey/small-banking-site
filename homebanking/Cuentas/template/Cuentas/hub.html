@@ -1,0 +1,109 @@
+{% extends "Cuentas/template/Cuentas/base.html" %}
+{% load static %}
+{% load mathfilters %}
+
+<html>
+    <head>
+        {% block title %} ITBANK - Inicio {% endblock %}
+        {% block extrahead %} 
+        <link type="text/css" href="{% static 'css/hub.css' %}" rel="stylesheet">
+        {% endblock %}
+    </head>
+
+    <body>
+
+        {% block content %}
+
+        <nav class="navbar-dark navbar-expand-md">
+          <div class="container-fluid">
+            <div class="row head2 nav2">
+              <button class="navbar-toggler burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <img src="{% static 'images/logo itbank.png' %}" alt="Logo itbank" class="d-inline-block align-text-top logo">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="col-1"></div>
+                  <div class="col-2 cent1"><a class="nav-link active1 ng" href="{% url 'hub' %}"> Inicio </a></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'prestamos' %}"> Préstamos </a></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'transf' %}"> Transferencias </a></div>
+                  <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'inv' %}"> Inversiones </a></div>
+                  <div class="col-2 cent1"><a class="nav-link dropdown-toggle ng" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Información </a>
+                    <ul class="dropdown-menu fondo drop" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item drop" href="{% url 'act' %}">Actividad</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'tarjetas' %}">Tarjetas</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'conf' %}">Configuración</a></li>
+                      <li><a class="dropdown-item drop" href="{% url 'seg' %}">Seguridad</a></li>
+                    </ul>
+                  </div>
+                <div class="col-1 cent1"></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+      
+      <div class="container-fluid contenido">
+        <div class="row gap-3 xd">
+          {% for c in datacuenta %}
+          <div class="col-lg fondo1 cent">
+            <div class="row">
+              <div class="col espacio1"> &nbsp</div>
+            </div>
+            Cuenta N°{{c.account_id}}
+            <div class="row">
+              <div class="col espacio1"> &nbsp</div>
+            </div>
+            <hr class="hr2">
+            <div class="container-fluid datacuenta">
+              <div class="row">
+                <div class="col txtcuenta">
+                  {{c.type}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col numcuenta">
+                  $ {{c.balance|div:100}}
+                </div>
+              </div>
+            </div>
+            <hr class="hr2">
+          </div>
+          {% endfor %}
+          {% if not datacuenta %}
+          <div class="container-fluid contenido">
+            <div class="row xd alineacion">
+              <div class="col fondo1 marg cent">
+                Actualmente no posee ninguna cuenta 
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>  
+      
+      {% if datacuenta %}
+      <div class="container-fluid contenido mtop">
+        <div class="row gap-3 xd">
+          <div class="col-lg fondo1 cent depositbox">
+            <div class="row">
+              <div class="col">
+                <a href="{% url 'transf' %}"><button type="button" class="btn btn-secondary boton boton3">Depositar</button></a>
+              </div>
+              <div class="col">
+                <a href="{% url 'transf' %}"><button type="button" class="btn btn-secondary boton boton3">Transferir</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% endblock %}
+
+    </body>
+</html>

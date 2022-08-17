@@ -1,0 +1,49 @@
+{% extends "Cuentas/template/Cuentas/base.html" %}
+{% load static %}
+
+<html>
+    <head>
+        {% block title %} ITBANK - Configuración {% endblock %}
+        {% block extrahead %} 
+        <link type="text/css" href="{% static 'css/hub.css' %}" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+
+        <nav class="navbar-dark navbar-expand-md">
+            <div class="container-fluid">
+              <div class="row head2 nav2">
+                <button class="navbar-toggler burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <img src="{% static 'images/logo itbank.png' %}" alt="Logo itbank" class="d-inline-block align-text-top logo">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="col-1"></div>
+                    <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'hub' %}"> Inicio </a></div>
+                    <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'prestamos' %}"> Préstamos </a></div>
+                    <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'transf' %}"> Transferencias </a></div>
+                    <div class="col-2 cent1"><a class="nav-link ng" href="{% url 'inv' %}"> Inversiones </a></div>
+                    <div class="col-2 cent1"><a class="nav-link active1 dropdown-toggle ng" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Información </a>
+                      <ul class="dropdown-menu fondo drop" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item drop" href="{% url 'act' %}">Actividad</a></li>
+                        <li><a class="dropdown-item drop" href="{% url 'tarjetas' %}">Tarjetas</a></li>
+                        <li><a class="dropdown-item drop" href="{% url 'conf' %}">Configuración</a></li>
+                        <li><a class="dropdown-item drop" href="{% url 'seg' %}">Seguridad</a></li>
+                      </ul>
+                    </div>
+                  <div class="col-1 cent1"></div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+
+        {% endblock %}
+    </body>
+</html>
